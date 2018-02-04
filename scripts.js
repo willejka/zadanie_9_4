@@ -1,13 +1,14 @@
-var i = 0,
-    j = 0;
-    
-function drawTree () {
-  for (var i=0; i<5; i++) { 
+function drawTree (x) {
+    for ( i = 0; i < x; i++) { 
         var star = ' ';
-          for (var j=0; j<=i; j++) {
-        star += '* ';        
-      }
-    console.log(star);
+        var space = ' ';            
+        for (j = 0; j <= i * 2; j++) {
+        star += '*';        
+     }
+    for (k = i + 1; k < x; k++) {
+        space += ' ';
+    }
+    console.log(space,star);
   }
 }
-drawTree();
+console.log(drawTree(6));
